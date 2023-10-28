@@ -58,14 +58,14 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
-          script:
-            cd /home/olnag/django_cicd
-            git pull origin main
-            source env/bin/activate
-            pip install -r requirement.txt
-            python manage.py migrate
-            sudo sestemctl restart gunicorn
-
+          script: expect /home/olnag/django_cicd/deploy.exp
+#            cd /home/olnag/django_cicd
+#            git pull origin main
+#            source env/bin/activate
+#            pip install -r requirement.txt
+#            python manage.py migrate
+#            sudo sestemctl restart gunicorn
+#
 
 
 
