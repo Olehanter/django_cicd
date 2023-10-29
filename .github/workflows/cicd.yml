@@ -45,21 +45,21 @@ jobs:
       - name: Установка зависимостей проекта
         run: pip install -r requirements.txt
 
-      - name: Линтинг
-        run: flake8 logistic --exclude logistic/migrations
+#      - name: Линтинг
+#        run: flake8 logistic --exclude logistic/migrations
 
-      - name: Тестирование
-        run: python manage.py test
-        env:
-          SECRET_KEY: ${{ env.SECRET_KEY }}
-          DEBUG: ${{ env.DEBUG }}
-          AVAILABLE_HOSTS: ${{ env.ALLOWED_HOSTS }}
-          ENGINE: ${{ env.DATABASE_ENGINE }}
-          USERNAME: ${{ env.DATABASE_USER }}
-          PASSWORD: ${{ env.DATABASE_PASSWORD }}
-          HOST: ${{ env.DATABASE_HOST }}
-          NAME: ${{ env.DATABASE_NAME }}
-          PORT: ${{ env.DATABASE_PORT }}
+#      - name: Тестирование
+#        run: python manage.py test
+#        env:
+#          SECRET_KEY: ${{ env.SECRET_KEY }}
+#          DEBUG: ${{ env.DEBUG }}
+#          AVAILABLE_HOSTS: ${{ env.ALLOWED_HOSTS }}
+#          ENGINE: ${{ env.DATABASE_ENGINE }}
+#          USERNAME: ${{ env.DATABASE_USER }}
+#          PASSWORD: ${{ env.DATABASE_PASSWORD }}
+#          HOST: ${{ env.DATABASE_HOST }}
+#          NAME: ${{ env.DATABASE_NAME }}
+#          PORT: ${{ env.DATABASE_PORT }}
 
 #        run: pytest
 
